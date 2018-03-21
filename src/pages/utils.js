@@ -1,7 +1,6 @@
 module.exports = {
 
 	convertTime( time ) {
-		console.log( "time:", time );
 		const timeStr = time.toString();
 		const min = timeStr.substr( timeStr.length - 2, 2);
 		let hr = timeStr.substring( 0, timeStr.length - 2);
