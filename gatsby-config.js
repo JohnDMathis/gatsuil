@@ -1,3 +1,5 @@
+const credentials = require( "./credentials/UIL Project-61e227c5fa12.json" );
+const spreadsheetId = "1X2SpNwcJ6uj9xj0rggtz_6SORk1qhLNgK8GGPpnCv3g";
 module.exports = {
   siteMetadata: {
     title: "ECA UIL 2018",
@@ -8,33 +10,33 @@ module.exports = {
 	  {
 		resolve: "gatsby-source-google-sheets",
 		options: {
-			spreadsheetId: "1X2SpNwcJ6uj9xj0rggtz_6SORk1qhLNgK8GGPpnCv3g",
+			spreadsheetId,
 			worksheetTitle: "Students",
-			credentials: require("./UIL Project-107cc84b4edc.json")
+			credentials
 		}
 	},
 	{
 		resolve: "gatsby-source-google-sheets",
 		options: {
-			spreadsheetId: "1X2SpNwcJ6uj9xj0rggtz_6SORk1qhLNgK8GGPpnCv3g",
+			spreadsheetId,
 			worksheetTitle: "Contests",
-			credentials: require("./UIL Project-107cc84b4edc.json")
+			credentials
 		}
 	},
 	{
 		resolve: "gatsby-source-google-sheets",
 		options: {
-			spreadsheetId: "1X2SpNwcJ6uj9xj0rggtz_6SORk1qhLNgK8GGPpnCv3g",
+			spreadsheetId,
 			worksheetTitle: "Subjects",
-			credentials: require("./UIL Project-107cc84b4edc.json")
+			credentials
 		}
 	},
 	{
 		resolve: "gatsby-source-google-sheets",
 		options: {
-			spreadsheetId: "1X2SpNwcJ6uj9xj0rggtz_6SORk1qhLNgK8GGPpnCv3g",
+			spreadsheetId,
 			worksheetTitle: "Schools",
-			credentials: require("./UIL Project-107cc84b4edc.json")
+			credentials
 		}
 	}
 	],
