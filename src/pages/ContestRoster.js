@@ -1,5 +1,6 @@
 import React from 'react'
 import "./reports.less";
+import { convertTime } from "./utils";
 
 class ContestRoster extends React.Component{
 
@@ -21,7 +22,7 @@ class ContestRoster extends React.Component{
 				<h2>Contest Roster</h2>
 				<h3>{ this.props.subject }, { this.props.grade }<sup>th</sup> Grade</h3>
 				<div className="box-left">
-					<p><b>Room { this.props.room }</b></p>
+					<p><b>Room { this.props.room } @ { convertTime( this.props.time ) }</b></p>
 				</div>
 				<div className="box-right">
 					<i>{ this.props.facilitator }</i>
@@ -37,9 +38,13 @@ class ContestRoster extends React.Component{
 
 					{ this.props.students.map( this.renderStudent ) }
 				</div>
-				<div style={ { marginTop:"30px", marginBottom:"40px" } }>
-					<p><span className="text-indent">Graders:</span>_______________________________________</p>
-					<p><span className="text-indent">&nbsp;</span>_______________________________________</p>
+				<div className="big-list" style={{ marginTop:"20px" }}>
+					<div className="row">
+						<div className="col-10">Graders:</div><div className="col-75">_______________________________________</div>
+					</div>
+					<div className="row">
+						<div className="col-10">&nbsp;</div><div className="col-50">______________________________________</div>
+					</div>
 				</div>
 
 		  </div>
